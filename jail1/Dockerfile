@@ -3,21 +3,12 @@ FROM python:3.9
 
 COPY ./main.py /home/ctf
 COPY ./flag.txt /home/ctf
-RUN chmod 444 /home/ctf/flag.txt
-RUN chmod 555 /home/ctf/main.py
 
 RUN apt update
 RUN apt install -y \
     socat
-
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir pycryptodome && \
-    pip install --no-cache-dir progress
-
 RUN useradd -d /home/ctf/ -m -p ctf -s /bin/bash ctf
 RUN echo "ctf:ctf" | chpasswd
-RUN pip3 install pycryptodome
-RUN pip3 install progress
 WORKDIR /home/ctf
 USER ctf
 
