@@ -1,8 +1,8 @@
 FROM ubuntu
 FROM python:3.9
 
-COPY ./main.py /home/ctf
-COPY ./flag.txt /home/ctf
+COPY ./main.py /home/ctf/main.py
+COPY ./flag.txt /home/ctf/flag.txt
 
 RUN apt update
 RUN apt install -y \
