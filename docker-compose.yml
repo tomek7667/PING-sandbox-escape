@@ -1,0 +1,30 @@
+version: "3"
+services:
+  jail1:
+    build: ./jail1
+    ports:
+      - "9991:3000"
+    restart: always
+    tty: true
+    stdin_open: true
+  jail2:
+    build: ./jail2
+    ports:
+      - "9992:3000"
+    restart: always
+    tty: true
+    stdin_open: true
+  jail3:
+    build: ./jail3
+    ports:
+      - "9993:3000"
+    restart: always
+    tty: true
+    stdin_open: true
+  jail4:
+    build: ./jail4
+    ports:
+      - "9994:3000"
+    restart: always
+    tty: true
+    stdin_open: true
